@@ -1,8 +1,23 @@
-body {
+/* Make the page use the full viewport height */
+html, body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* This is your main content wrapper */
+.main-content {
+  flex: 1; /* Takes up all available space between header and footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
 }
 
 .container {
@@ -12,8 +27,8 @@ body {
   justify-content: center;
   padding: 5vw;
   flex-wrap: wrap;
-  gap: 3vw;
 }
+
 
 .profile-pic img {
   width: clamp(200px, 30vw, 300px);
