@@ -7,58 +7,64 @@ body {
 
 .container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 5vw;
   flex-wrap: wrap;
+  gap: 3vw;
 }
 
 .profile-pic img {
-  width: 300px;
-  height: 300px;
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(200px, 30vw, 300px);
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .intro {
-  margin-left: 50px;
-  max-width: 500px;
+  max-width: 600px;
+  flex: 1;
+  text-align: center;
 }
 
 .intro h1 {
-  font-size: 60px;
+  font-size: clamp(40px, 5vw, 60px);
   margin-bottom: 10px;
 }
 
 .intro h2 {
-  font-size: 22px;
+  font-size: clamp(18px, 2.5vw, 24px);
   margin-bottom: 10px;
   color: #111;
 }
 
 .intro p {
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 18px);
   margin-bottom: 30px;
   line-height: 1.6;
 }
 
 .buttons {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: wrap;
 }
 
 .btn {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: clamp(80px, 10vw, 100px);
+  height: clamp(80px, 10vw, 100px);
   border-radius: 50%;
   text-align: center;
-  line-height: 100px;
+  line-height: clamp(80px, 10vw, 100px);
   font-weight: bold;
   text-decoration: none;
   color: #000;
   transition: transform 0.2s ease;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 .btn:hover {
@@ -76,4 +82,49 @@ body {
 .btn.blue {
   background-color: #6dd6e3;
 }
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 5vw;
+  background-color: #f0f0f0;
+  margin-top: 5vw;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
 
