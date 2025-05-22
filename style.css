@@ -98,6 +98,10 @@ body {
   background-color: #6dd6e3;
 }
 
+.btn.green {
+  background-color: #80c97e; 
+}
+
 
 .footer {
   display: flex;
